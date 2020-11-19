@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>应聘登记表</title>
+    <link rel="stylesheet" type="text/css" href="iosSelect/iosSelect.css" />
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    #title {
+        background-color: rgb(108, 150, 186);
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        font-size: 14px;
+        color: white;
+        font-weight: 400;
+    }
+
+    #title-item {
+        padding: 5px 0;
+    }
+
+    .logo {
+        color: red
+    }
+
+    .item {
+        margin: 10px 0px 5px 15px
+    }
+    .tab{
+        /* display: flex; */
+        width: 90%;
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin: 10px 0;
+
+    }
+    tr th,td{
+        border: 1px solid black;
+    }
+    #btn1{
+        margin: 10px 0;
+        background-color:rgb(106,152,185);
+        color: white;
+        text-align: center;
+        width: 90%;
+    }
+</style>
+
+<body>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="iosSelect/iosSelect.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/Utils.js" type="text/javascript" charset="utf-8"></script>
+    <header>
+        <div id="title">
+            <div id="title-item">
+                <span>杭州方大丝绸有限公司</span><br>
+                <span>应聘登记表</span>
+            </div>
+        </div>
+    </header>
+    <div class="item">
+        <div class="oItem1"><label for="position"><sup class="logo">*</sup>应聘岗位</label></div>
+        <div class="oItem2"><input name="position"
+                style="border-top:0;border-left:0;border-right:0;border-color: rgb(241,241,241);width: 100%;"
+                type="text" placeholder="请输入" value="" /></div>
+    </div>
+    <div class="item">
+        <div class="oItem1"><label for="today"><sup class="logo">*</sup>填表日期</label></div>
+        <div class="oItem2">
+            <div><input id="trigger1" style="width:90%;text-align: center;" type="text" placeholder="请选择" value="">
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="oItem1"><label for="position"><sup class="logo">*</sup>姓名</label></div>
+        <div class="oItem2"><input name="position"
+                style="border-top:0;border-left:0;border-right:0;border-color: rgb(241,241,241);width: 100%;"
+                type="text" placeholder="请输入" value="" /></div>
+    </div>
+    <div class="item">
+        <div class="oItem1"><label for="today"><sup class="logo">*</sup>性别</label></div>
+        <div class="oItem2">
+            <div><input id="trigger2" style="width:90%;text-align: center;" type="text" placeholder="请选择" value="">
+            </div>
+        </div>
+        <div class="container"></div>
+    </div>
+    <div class="item">
+        <div class="oItem1"><label for="birthday"><sup class="logo">*</sup>出生日期</label></div>
+        <div class="oItem2">
+            <div><input id="trigger3" style="width:90%;text-align: center;" type="text" placeholder="请选择" value="">
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="oItem1"><label for="position"><sup class="logo">*</sup>民族</label></div>
+        <div class="oItem2"><input name="position"
+                style="border-top:0;border-left:0;border-right:0;border-color: rgb(241,241,241);width: 100%;"
+                type="text" placeholder="请输入" value="" /></div>
+    </div>
+    <div class="item">
+        <div class="oItem1"><label for="position"><sup class="logo">*</sup>政治面貌</label></div>
+        <div class="oItem2"><input name="position"
+                style="border-top:0;border-left:0;border-right:0;border-color: rgb(241,241,241);width: 100%;"
+                type="text" placeholder="请输入" value="" /></div>
+    </div>
+    <div class="item">
+        <div class="oItem1"><label for="today"><sup class="logo">*</sup>婚否</label></div>
+        <div class="oItem2">
+            <div><input id="trigger4" style="width:90%;text-align: center;" type="text" placeholder="请选择" value="">
+            </div>
+        </div>
+        <div class="container"></div>
+    </div>
+
+    <div class="item">
+        <div class="oItem1"><label for="position"><sup class="logo">*</sup>健康状况</label></div>
+        <div class="oItem2"><input name="position"
+                style="border-top:0;border-left:0;border-right:0;border-color: rgb(241,241,241);width: 100%;"
+                type="text" placeholder="请输入" value="" /></div>
+    </div>
+    <div class="item">
+        <div class="oItem1"><label for="position"><sup class="logo">*</sup>籍贯(省、市)</label></div>
+        <div class="oItem2"><input name="position"
+                style="border-top:0;border-left:0;border-right:0;border-color: rgb(241,241,241);width: 100%;"
+                type="text" placeholder="请输入" value="" /></div>
+    </div>
+    <div class="item">
+        <div class="oItem1"><label for="position"><sup class="logo">*</sup>联系方式</label></div>
+        <div class="oItem2"><input name="position"
+                style="border-top:0;border-left:0;border-right:0;border-color: rgb(241,241,241);width: 100%;"
+                type="text" placeholder="请输入" value="" /></div>
+    </div>
+    <div class="item">
+        <div class="oItem1"><label for="position"><sup class="logo">*</sup>电子邮箱</label></div>
+        <div class="oItem2"><input name="position"
+                style="border-top:0;border-left:0;border-right:0;border-color: rgb(241,241,241);width: 100%;"
+                type="email" name="usremail" placeholder="请输入" value="" /></div>
+    </div>
+    <div class="item">
+        <div class="oItem1"><label for="position"><sup class="logo">*</sup>学历</label></div>
+        <div class="oItem2"><input name="position"
+                style="border-top:0;border-left:0;border-right:0;border-color: rgb(241,241,241);width: 100%;"
+                type="text" placeholder="请输入" value="" /></div>
+    </div>
+    <div class="item">
+        <div class="oItem1"><label for="position"><sup class="logo">*</sup>现住地</label></div>
+        <div class="oItem2"><input name="position"
+                style="border-top:0;border-left:0;border-right:0;border-color: rgb(241,241,241);width: 100%;"
+                type="text" placeholder="请输入" value="" /></div>
+    </div>
+    <div class="item">
+        <div class="oItem1"><label for="position"><sup class="logo">*</sup>目前是否在职</label></div>
+        <div class="oItem2"><input name="position"
+                style="border-top:0;border-left:0;border-right:0;border-color: rgb(241,241,241);width: 100%;"
+                type="text" placeholder="请输入" value="" /></div>
+    </div>
+    <div class="item">
+        <div class="oItem1"><label for="birthday"><sup class="logo">*</sup>预计到岗时间</label></div>
+        <div class="oItem2">
+            <div><input id="trigger5" style="width:90%;text-align: center;" type="text" placeholder="请选择" value="">
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="oItem1"><label for="position"><sup class="logo">*</sup>期望薪资</label></div>
+        <div class="oItem2"><input name="position"
+                style="border-top:0;border-left:0;border-right:0;border-color: rgb(241,241,241);width: 100%;"
+                type="text" placeholder="请输入" value="" /></div>
+    </div>
+    <div class="item">
+        <div class="oItem1"><label for="position"><sup class="logo">*</sup>外语水平</label></div>
+        <div class="oItem2"><input name="position"
+                style="border-top:0;border-left:0;border-right:0;border-color: rgb(241,241,241);width: 100%;"
+                type="text" placeholder="请输入" value="" /></div>
+    </div>
+    <div class="item">
+        <div class="oItem1"><label for="position"><sup class="logo">*</sup>计算机水平</label></div>
+        <div class="oItem2"><input name="position"
+                style="border-top:0;border-left:0;border-right:0;border-color: rgb(241,241,241);width: 100%;"
+                type="text" placeholder="请输入" value="" /></div>
+    </div>
+    <div class="item">
+        <div class="oItem1"><label for="position"><sup class="logo">*</sup>教育经历(请至少完整填写一行)</label></div>
+        <div>
+            <table class="tab">
+            <tr>
+                <th>时间</th>
+                <th>毕业院校</th>
+                <th>专业</th>
+                <th>详细情况</th>
+            </tr>
+            <tr>
+                <td>&nbsp</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>&nbsp</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table></div>
+    </div>
+    <div class="item">
+        <div class="oItem1"><label for="position"><sup class="logo">*</sup>工作经历(请至少完整填写一行，没有则写<span style="color: red;">`无`</span>)</label></div>
+        <div>
+            <table class="tab">
+            <tr>
+                <th>时间</th>
+                <th>公司名称</th>
+                <th>职务</th>
+                <th>职责</th>
+            </tr>
+            <tr>
+                <td>&nbsp</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>&nbsp</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table></div>
+    </div>
+
+    <div class="item">
+        <div class="oItem1"><label for="position">个人荣誉</label></div>
+        <div class="oItem2"><input name="position"
+                style="border-top:0;border-left:0;border-right:0;border-color: rgb(241,241,241);width: 100%;"
+                type="text" placeholder="请输入" value="" /></div>
+    </div><div class="item">
+        <div class="oItem1"><label for="position">兴趣特长</label></div>
+        <div class="oItem2"><input name="position"
+                style="border-top:0;border-left:0;border-right:0;border-color: rgb(241,241,241);width: 100%;"
+                type="text" placeholder="请输入" value="" /></div>
+    </div>
+    <div class="item">
+        <div class="oItem1"><label for="position"><sup class="logo">*</sup>自我评价</label></div>
+        <div class="oItem2"><textarea style="border-top:0;border-left:0;border-right:0;border-color: rgb(241,241,241);width: 100%;" name="" id="" cols="30" rows="10" placeholder="请输入"></textarea></div>
+    </div>
+    <div class="item"><button id="btn1">提&nbsp&nbsp&nbsp交</button></div>
+    <script type="text/javascript">
+        var util = new Utils();
+        var dateStr;
+        var curentDate;
+
+        window.onload = function () {
+            // $("#itempop").popup();
+            dateStr = util.getNowFormatDate();
+            curentDate = util.getNowFormatDate();
+
+            initComponets1();
+            initComponets2();
+            initComponets3();
+        }
+
+        var dateObj;
+
+        function initComponets1() {
+            $("#trigger1").bind("click", function () {
+                var d = $("#trigger1").val();
+                var maxArr = util.getDateArray(new Date().getTime());
+                var minArr = [2020, 01, 01];
+                var arrDefualt = d.split("-");
+                util.DatePicker(minArr, maxArr, arrDefualt, -1, function (year, month, date) {
+                    dateStr = year + "-" + month + "-" + date;
+                    $("#trigger1").val(dateStr);
+                });
+            });
+        }
+
+        function initComponets2() {
+            $("#trigger3").bind("click", function () {
+                var d = $("#trigger3").val();
+                var maxArr = util.getDateArray(new Date().getTime());
+                var minArr = [1980, 01, 01];
+                var arrDefualt = d.split("-");
+                util.DatePicker(minArr, maxArr, arrDefualt, -1, function (year, month, date) {
+                    dateStr = year + "-" + month + "-" + date;
+                    $("#trigger3").val(dateStr);
+
+                });
+            });
+        }
+        function initComponets3() {
+            $("#trigger5").bind("click", function () {
+                var d = $("#trigger5").val();
+                // var maxArr = util.getDateArray(new Date().getTime());
+                var maxArr1 = [2021, 12, 31];
+                var minArr = [2020, 01, 01];
+                var arrDefualt = d.split("-");
+                util.DatePicker(minArr, maxArr1, arrDefualt, -1, function (year, month, date) {
+                    dateStr = year + "-" + month + "-" + date;
+                    $("#trigger5").val(dateStr);
+
+                });
+            });
+        }
+        var showSex = document.querySelector('#trigger2');
+        showSex.addEventListener('click', function () {
+            var sexSelect = new IosSelect(1,
+                [
+                    [{
+                        'value': '男'
+                    }, {
+                        'value': '女'
+                    }]
+                ], {
+                    container: '.container',
+                    title: '性别',
+                    itemHeight: 50,
+                    itemShowCount: 3,
+                    callback: function (selectOneObj) {
+                        showSex.value = selectOneObj.value;
+                    }
+                });
+        });
+        var showMar = document.querySelector('#trigger4');
+        showMar.addEventListener('click', function () {
+            var marSelect = new IosSelect(1,
+                [
+                    [{
+                        'value': '已婚'
+                    }, {
+                        'value': '未婚'
+                    }]
+                ], {
+                    container: '.container',
+                    title: '婚姻状况',
+                    itemHeight: 50,
+                    itemShowCount: 3,
+                    callback: function (selectOneObj) {
+                        showMar.value = selectOneObj.value;
+                    }
+                });
+        });
+    </script>
+</body>
+
+</html>
